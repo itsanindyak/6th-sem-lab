@@ -7,7 +7,7 @@ void checkCRC(char dw[],char div[]){
     char temp[50];
     strcpy(temp,dw);
 
-    for(int i =0;i< strlen(temp) - strlen(div)-1;i++){
+    for(int i =0;i< strlen(temp) - strlen(div)+1;i++){
         if(temp[i] == '1'){
             for(int j = 0;j< strlen(div);j++){
                 temp[i+j] = (temp[i+j] == div[j]) ? '0' : '1';
